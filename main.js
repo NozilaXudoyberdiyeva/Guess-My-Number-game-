@@ -1,4 +1,4 @@
-const number = Math.trunc(Math.random() * 20 + 1);
+let number = Math.trunc(Math.random() * 10 + 1);
 let score = 5;
 console.log(number);
 
@@ -31,4 +31,14 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
+});
+
+document.querySelector(".again").addEventListener("click", function () {
+  score = 5;
+  number = Math.trunc(Math.random() * 10 + 1);
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".score").textContent = score;
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".guess").value = "";
+  document.querySelector("body").style.backgroundColor = "#fff";
 });
